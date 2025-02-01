@@ -19,82 +19,125 @@ top: 10%;
 left: calc(50% - 100px);
 transform-style: preserve-3d;
 transform: perspective(1000px);
-animation: autorun 20s infinite linear; 
+animation: autorun 15s infinite linear; 
 z-index: 2;
 
 }
 @keyframes autorun{
     from{
-        transform: perspective(100px)  rotateX(-16deg) rotateY(0deg);}
-     
-    to{
-        transform: perspective(100px)  rotateX(-16deg) rotateY(360deg);}
+        transform: perspective(1000px) rotateX(-16deg) rotateY(0deg);
+    }to{
+        transform: perspective(1000px) rotateX(-16deg) rotateY(360deg);}
     }
 .banner .slider .item{
      inset: 0000;
     position: absolute;
-    width: 200px;
-    transform: rotateY(calc((var(--position) - 1) * (360deg/var(--quantity)))) translateZ(550px);}
+    transform: rotateY(calc((var(--position) - 1) * (360/var(--quantity))*1deg)) translateZ(550px);}
     
    
 .banner .slider .item img{
     width: 100%;
     height: 100%;
     object-fit: cover;
-    border-radius: 10px;
-    box-shadow: 0 0 10px rgba(0,0,0,0.5);
-
+    
 }
 .banner .content{
     position: absolute;
-    width: 100%;
-    height: max-content;
     bottom: 0;
     left: 50%;
     transform: translateX(-50%);
-    width: min(1400px,100vh);
+    width: min(1400px, 100vw);
+    height: max-content;
     padding-bottom: 100px;
-    flex-wrap: wrap;
     display: flex;
+    flex-wrap: wrap;
     justify-content: space-between;
     align-items: center;
-    background: rgba(0,0,0,0.5);
-    color: #fff;
-    font-family: 'Rubik', sans-serif;
-    align-items: center;
-    text-transform: uppercase;
-    letter-spacing: 2px;
-    opacity: 0;
-    transition: 0.5s;
     z-index: 1;
 }
 .banner .content h1{
-     position: absolute;
-     font-family: rubik;
-     font-size: 1rem;
-     line-height: 1em;
-     color: #25283B;
-     position: relative;
+    font-family: 'ICA Rubrik';
+    font-size: 16em;
+    line-height: 1em;
+    color: #25283B;
+    position: relative;
+    box-shadow: #d2d2d2;
+    
      
 }
 .banner .content h1::after{
-    content: attr(data-content);
     position: absolute;
-    inset: 0000;
-     content: attr(data-content);
-     z-index: 2;
-     -webkit-text-stroke: 2px #d2d2d2;
-     color: transparent;
+    inset: 0 0 0 0;
+    content: attr(data-content);
+    z-index: 45 ;
+    -webkit-text-stroke: 2px #d2d2d2;
+    color: transparent;
 
 }
-.banner .content .author{font-family: poppins;
-text-align: right;
-max-width: 200px;}
-@media screen and (max-width: 1023px){
+.banner .content .author{
+    font-family: Poppins;
+    text-align: right;
+    max-width: 200px;
+    z-index: 12;
+}
+.banner .content h2{
+    font-size: 3em;
+    text-shadow: 0 10px 20px #dadada;
+    z-index: 4;
+}
+.banner .content .model{
+    background-image: url();
+    width: 100%;
+    height: 75vh;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    background-size: auto 130%;
+    background-repeat: no-repeat;
+    background-position: top center;
+    z-index: 1;
+}
+@media screen and (max-width: 1023px) {
+    .banner .slider{
+        width: 160px;
+        height: 200px;
+        left: calc(50% - 80px);
+    }
+    .banner .slider .item{
+        transform: 
+            rotateY(calc( (var(--position) - 1) * (360 / var(--quantity)) * 1deg))
+            translateZ(300px);
+    }
+    .banner .content h1{
+        text-align: center;
+        width: 100%;
+        text-shadow: 0 10px 20px #000000;
+        font-size: 7em;
+    }
+    .banner .content .author{
+        color: #fff;
+        padding: 20px;
+        text-shadow: 0 10px 20px #ffffff80;
+        z-index: 2;
+        max-width: unset;
+        width: 100%;
+        text-align: center;
+        padding: 0 30px;
+        text-glow: 10px 0px#ffffff80;
+    }
+}
+@media screen and (max-width: 767px) {
     .banner .slider{
         width: 100px;
-        height: 200px;
-        left: calc(50% - 800px);
+        height: 150px;
+        left: calc(50% - 50px);
     }
-     
+    .banner .slider .item{
+        transform: 
+            rotateY(calc( (var(--position) - 1) * (360 / var(--quantity)) * 1deg))
+            translateZ(180px);
+    }
+    .banner .content h1{
+        font-size: 5em;
+    }
 }

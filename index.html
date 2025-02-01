@@ -10,23 +10,29 @@
      box-sizing: border-box;
      
 }
-body{background-color: #d2d2d2;
-     background-image: repeating-linear-gradient(to right, trasparent 0 100px, #25283b22 100px 101px)
-     repeating-linear-gradient(to bottom, trasparent 0 100px, #25283b22 100px 101px);}
+body{background-color: #D2D2D2;
+            background-image:
+            repeating-linear-gradient(
+                to right, transparent 0 100px,
+                #25283b22 100px 101px
+            ),
+            repeating-linear-gradient(
+                to bottom, transparent 0 100px,
+                #25283b22 100px 101px
+            );}
      body::before{
           position: absolute;
-          content: "";
-          top: 0;
-          left: 50%;
-          background-size: 100%;
-          background-repeat: no-repeat;
-          background-position: top center;
-          pointer-events: none;
-          width: min(1400px, 90vh);
-          height: 90%;
-          transform: translate(-50%, -50%);
-          background-image: url("18532.jpg");}
-     
+            width: min(1400px, 90vw);
+            top: 5%;
+            left: 50%;
+            height: 90%;
+            transform: translateX(-50%);
+            content: '';
+            background-image: url(18532.jpg);
+            background-size: 100%;
+            background-repeat: no-repeat;
+            background-position:  center;
+            pointer-events: none;}
      </style>
      <link rel="stylesheet" href="style.css">
 </head>
@@ -35,21 +41,30 @@ body{background-color: #d2d2d2;
      <div class="banner">
           <div class="slider" style="--quantity:10">
                <div class="item" style="--position:2"><img src="/images/image1.webp" alt="image1"></div> 
-               <div class="item" style="--position:3"><img src="/images/image2.jpeg" alt="image1"></div> 
-               <div class="item" style="--position:3"><img src="/images/image3.webp" alt="image1"></div> 
-               <div class="item" style="--position:4"><img src="/images/image4.jpg" alt="image1"></div> 
-               <div class="item" style="--position:5"><img src="/images/image5.jpeg" alt="image1"></div> 
-               <div class="item" style="--position:6"><img src="/images/image6.jpeg" alt="image1"></div> 
-               <div class="item" style="--position:7"><img src="/images/image7.jpeg" alt="image1"></div> 
-               <div class="item" style="--position:8"><img src="/images/image8.jpeg" alt="image1"></div> 
-               <div class="item" style="--position:9"><img src="/images/image9.jpeg" alt="image1"></div> 
-               <div class="item" style="--position:10"><img src="/images/image10.jpg" alt="image1"></div> 
+               <div class="item" style="--position:3"><img src="/images/image2.jpeg" alt="image2"></div> 
+               <div class="item" style="--position:3"><img src="/images/image3.webp" alt="image3"></div> 
+               <div class="item" style="--position:4"><img src="/images/image4.jpg" alt="image4"></div> 
+               <div class="item" style="--position:5"><img src="/images/image5.jpeg" alt="image5"></div> 
+               <div class="item" style="--position:6"><img src="/images/image6.jpeg" alt="image6"></div> 
+               <div class="item" style="--position:7"><img src="/images/image7.jpeg" alt="image7"></div> 
+               <div class="item" style="--position:8"><img src="/images/image8.jpeg" alt="image8"></div> 
+               <div class="item" style="--position:9"><img src="/images/image9.jpeg" alt="image9"></div> 
+               <div class="item" style="--position:10"><img src="/images/image10.jpg" alt="image10"></div>
+               <div class="item" style="--position:11"><img src="/images/image11.jpg" alt="image11"></div> 
      
           </div>
-          </div>
-     <div class="content">
-          <h1 data content ></h1>
-          <div class="author"><h2>Anshul</h2></div>
+          <div class="content">
+              <h1 data-content="WEB DEV">
+               
+              </h1>
+              <div class="author">
+                  <h2>ANSHUL KOSHTA</h2>
+                  <p><b>web project</b></p>
+                  <p>
+                      ignore messey codes
+                  </p>
+              </div>
+              <div class="model"></div>
      </div>
      
 </body>
